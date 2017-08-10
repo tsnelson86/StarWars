@@ -33,7 +33,7 @@ var characterchoices = {
 	chewy : {
 		id: 'chewy',
 		name:"Chewy", 
-		life: 220, 
+		life: 225, 
 		attack: 10
 	},
 	boba : {
