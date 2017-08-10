@@ -1,0 +1,75 @@
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/background2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 120vh;
+}
+
+.headerstuffs {
+	background: none;
+	border: 2px solid #cccccc;
+	margin-top: 25px;
+	text-align: center;
+	color: #cccccc;
+}
+
+.selectSection {
+
+}
+
+.starter {
+	padding: 0;
+}
+
+.character {
+	max-height: 115px;
+	max-width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.name,
+.descriptions,
+.notifications {
+	color: #cccccc;
+	font-size: 14px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.character-card {
+	border: 1px solid #cccccc;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#chosen {
+	visibility: hidden;
+	text-align: center;
+	color: #cccccc;
+	border: 1px solid #cccccc;
+}
+
+#enemy {
+	visibility: hidden;
+	text-align: center;
+	color: #cccccc;
+	border: 1px solid #cccccc;
+}
+
+.notifications {
+	visibility: hidden;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+
+#theField {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+}
+
+#attackbtn{
+	visibility: hidden;
+	margin: 120px auto;
+	display: block;
+	vertical-align: middle;
+}
