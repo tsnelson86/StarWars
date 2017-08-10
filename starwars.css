@@ -24,6 +24,10 @@ body {
 	margin-bottom: 10px;
 }
 
+.jumbotron {
+	margin-bottom: 15px;
+}
+
 .name,
 .descriptions,
 .notifications {
@@ -72,4 +76,8 @@ body {
 	margin: 120px auto;
 	display: block;
 	vertical-align: middle;
+}
+
+.panel-body {
+	padding-bottom: 0px;
 }
