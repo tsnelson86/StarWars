@@ -13,10 +13,6 @@ body {
 	color: #cccccc;
 }
 
-.selectSection {
-
-}
-
 .starter {
 	padding: 0;
 }
@@ -61,6 +57,10 @@ body {
 	visibility: hidden;
 	margin-bottom: 15px;
 	font-size: 18px;
+}
+
+.fighteralert {
+	visibility: visible;
 }
 
 #theField {

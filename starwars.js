@@ -17,54 +17,56 @@ $(document).ready(function() {
 	};
 
 // Basic stats for all characters
-	var ewok = {
+var characterchoices = {
+	ewok : {
 		id: 'ewok',
 		name:"An Ewok", 
 		life: 400, 
 		attack: 5
-	};
-	var yoda = {
+	},
+	yoda : {
 		id: 'yoda',
 		name:"Yoda", 
 		life: 200, 
 		attack: 20
-	};
-	var chewy = {
+	},
+	chewy : {
 		id: 'chewy',
 		name:"Chewy", 
 		life: 220, 
 		attack: 10
-	};
-	var boba = {
+	},
+	boba : {
 		id: 'boba',
 		name:"Boba Fett", 
 		life: 200, 
 		attack: 12
-	};
-	var dm = {
+	},
+	dm : {
 		id: 'dm',
 		name:"Darth Maul", 
 		life: 200, 
 		attack: 15
-	};
-	var vadar = {
+	},
+	vadar : {
 		id: 'vadar',
 		name:"Darth Vadar", 
 		life: 200, 
 		attack: 18
-	};
-	var robot = {
+	},
+	robot : {
 		id: 'robot',
 		name:"General Grievous", 
 		life: 200, 
 		attack: 12
-	};
-	var sideous = {
+	},
+	sideous : {
 		id: 'sideous',
 		name:"Darth Sidious", 
 		life: 150, 
 		attack: 25
-	};
+	}
+};
 
 // Variables that are used to that a function can be used universally in the code
 	var clickcharacter = {};
@@ -75,42 +77,42 @@ $(document).ready(function() {
 
 // Function to determine if ewok was clicked as main character, enemy, or in the middle of a battle
 	$("#ewok").click(function(){
-		clickedCharacter = ewok;
+		clickedCharacter = characterchoices.ewok;
 		selections(ewok);
 	});
 
 	$("#dm").click(function(){
-		clickedCharacter = dm;
+		clickedCharacter = characterchoices.dm;
 		selections(dm);
 	});
 
 	$("#yoda").click(function(){
-		clickedCharacter = yoda;		
+		clickedCharacter = characterchoices.yoda;		
 		selections(yoda);
 	});
 
 	$("#chewy").click(function(){
-		clickedCharacter = chewy;		
+		clickedCharacter = characterchoices.chewy;		
 		selections(chewy);
 	});
 
 	$("#robot").click(function(){
-		clickedCharacter = robot;		
+		clickedCharacter = characterchoices.robot;		
 		selections(robot);
 	});
 
 	$("#vadar").click(function(){
-		clickedCharacter = vadar;		
+		clickedCharacter = characterchoices.vadar;		
 		selections(vadar);
 	});
 
 	$("#sideous").click(function(){
-		clickedCharacter = sideous;		
+		clickedCharacter = characterchoices.sideous;		
 		selections(sideous);
 	});
 
 	$("#boba").click(function(){
-		clickedCharacter = boba;		
+		clickedCharacter = characterchoices.boba;		
 		selections(boba);
 	});
 
@@ -158,7 +160,8 @@ $(document).ready(function() {
 			myCharacter.baseattack = clickedCharacter.attack;
 			myCharacter.chosen = "yes";
 			console.log(myCharacter);
-			$(".gamedescription").text("Great, Now select an enemy to battle!");
+			$(".gamedescription").text("You chose " + myCharacter.name + ". Now select an enemy to battle!");
+			$(".fighteralert").text("Select an enemy to do battle against. You must defeat them all to win, so pick wisely.");
 		} else if (enemy.chosen == "no"){
 			var selectedEnemy = $('#'+character.id).html();
 			$("#enemy").html(selectedEnemy);
@@ -173,6 +176,7 @@ $(document).ready(function() {
 			$(".gamedescription").text("Prepare to battle " + enemy.name + "!");
 			$(".notifications").css("visibility", "visible");
 			$("#attackbtn").css("visibility", "visible");
+			$(".fighteralert").text("These fighters are still waiting in the wings to battle you.");
 		} else {
 			$(".gamedescription").text("Please finish your current battle before chosen another enemy.");
 			$(".gamedescription").css("color", "red");
